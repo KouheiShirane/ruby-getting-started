@@ -26,6 +26,12 @@
          when Line::Bot::Event::Message
            case event.type
            when Line::Bot::Event::MessageType::Text
+               if event.message["text"] == "旅行"
+                   message = {
+                       type: "text",
+                       text: "島根に行きましょう!!"
+                   }
+               end
              message = {
                type: "text",
                text:  ["島根は鳥取の左側です",
