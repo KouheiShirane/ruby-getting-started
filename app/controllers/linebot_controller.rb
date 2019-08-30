@@ -50,6 +50,13 @@
                         previewImageUrl: image_url
                    }
                    ]
+                   elsifevent.message["text"] =~ //
+                   message = [
+                       {
+                       type: "text",
+                       text: ["島根に行きましょう!!","鳥取なんかより島根の方が楽しいですよ!!"].shuffle.first
+                   }
+                   ]
                else
                  message = [
                      {
@@ -59,7 +66,8 @@
                             "上司だからっていい気になりやがって…バカ野郎!!",
                             "島根ではよくあることです",
                             "島根には世界遺産があると言っても信じてもらえません…",
-                            "島根県に来るならここを確認です。https://www.kankou-shimane.com"].shuffle.first
+                            "島根なら人が少ないのでドローン飛ばしても怒られません"
+                            ].shuffle.first
                  }
                  ]
                 end
