@@ -33,7 +33,7 @@
                         "上司だからっていい気になりやがって…バカ野郎!!",
                         "島根ではよくあることです",
                         "島根には世界遺産があると言っても信じてもらえません…",
-                        "https://www.kankou-shimane.com"].shuffle.first
+                        "島根県に来るならここを確認です。https://www.kankou-shimane.com"].shuffle.first
              }
              client.reply_message(event["replyToken"], message)
            when Line::Bot::Event::MessageType::Location
