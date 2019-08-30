@@ -34,7 +34,7 @@
                    }
                    ]
                    elsif
-                   image_url = = "https://gigazine.net/news/20150213-yoshidakun-birthday/#group=nogroup&photo=11.jpg"
+                   image_url =  "https://gigazine.net/news/20150213-yoshidakun-birthday/#group=nogroup&photo=11.jpg"
                    event.message["text"] =~ /自己紹介/
                    message = [
                        {
