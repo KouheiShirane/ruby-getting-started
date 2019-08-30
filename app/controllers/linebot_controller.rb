@@ -33,7 +33,7 @@
                        text: ["島根に行きましょう!!","鳥取なんかより島根の方が楽しいですよ!!"].shuffle.first
                    }
                    ]
-               elsif event.message["text"] =~ /自己紹介/
+               elsif event.message["text"] == /"自己紹介"/
                         message = [
                             {
                                 tyep: "text"
