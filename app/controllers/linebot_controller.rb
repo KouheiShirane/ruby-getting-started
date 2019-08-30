@@ -50,11 +50,12 @@
                         previewImageUrl: image_url
                    }
                    ]
-                   elsifevent.message["text"] =~ //
+                   elsif
+                   event.message["text"] =~ /アニメ/
                    message = [
                        {
                        type: "text",
-                       text: ["島根に行きましょう!!","鳥取なんかより島根の方が楽しいですよ!!"].shuffle.first
+                       text: ["https://www.youtube.com/watch?v=VvvSfLFGyws"].shuffle.first
                    }
                    ]
                else
