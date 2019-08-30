@@ -26,7 +26,14 @@
          when Line::Bot::Event::Message
            case event.type
            when Line::Bot::Event::MessageType::Text
-                if event.message["text"] =~ /島根/
+                if event.message["text"] =~ /砂丘/
+                   message = [
+                       {
+                       type: "text",
+                       text: ["いいえ、砂丘はありません。","砂丘は島根にはないって言ってるでしょうが!!"].shuffle.first
+                   }
+                   ]
+                    elsif event.message["text"] =~ /島根/
                    message = [
                        {
                        type: "text",
