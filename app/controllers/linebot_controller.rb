@@ -49,6 +49,15 @@
                         previewImageUrl: image_url
                        }
                      ]
+                     elsif event.message["text"] =~ /アニメ/
+                     message = [
+                       {
+                       type: "text",
+                       text: ["僕ってアニメ出てるんですよ？",
+                       "僕のアニメを見てください!!
+https://www.youtube.com/watch?v=VvvSfLFGyws"].shuffle.first
+                   }
+                   ]
                 else
                  message = [
                      {
