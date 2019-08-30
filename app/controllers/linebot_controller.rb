@@ -46,6 +46,13 @@
                         previewImageUrl: image_url
                        }
                    ]
+                   elsif event.message["text"] == "島根じゃないです。"
+                   message = [
+                       {
+                       type: "text",
+                       text: ["島根に行きましょう!!","僕は島根で待っています。"].shuffle.first
+                   }
+                   ]
                 elsif event.message["text"] =~ /キーワード/
                    message = [
                        {
