@@ -27,10 +27,12 @@
            case event.type
            when Line::Bot::Event::MessageType::Text
                if event.message["text"] =~ "旅行"
-                   message = {
+                   message = [
+                       {
                        type: "text",
                        text: "島根に行きましょう!!"
                    }
+                   ]
                else
                  message = {
                    type: "text",
