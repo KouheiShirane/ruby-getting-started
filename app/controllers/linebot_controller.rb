@@ -33,9 +33,8 @@
                        text: ["島根に行きましょう!!","鳥取なんかより島根の方が楽しいですよ!!"].shuffle.first
                    }
                    ]
-                   elsif
+                   elsif　event.message["text"] =~ /自己紹介/
                    image_url =  "https://blog-imgs-19.fc2.com/a/p/g/apg/taka1-18.jpg"
-                   event.message["text"] =~ /自己紹介/
                    message = [
                        {
                        type: "text",
@@ -50,8 +49,7 @@
                         previewImageUrl: image_url
                    }
                    ]
-                   elsif
-                   event.message["text"] =~ /アニメ/
+                   elsif　event.message["text"] =~ /アニメ/
                    message = [
                        {
                        type: "text",
