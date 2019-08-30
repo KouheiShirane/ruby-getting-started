@@ -26,7 +26,7 @@
          when Line::Bot::Event::Message
            case event.type
            when Line::Bot::Event::MessageType::Text
-               if event.message["text"] =~ "旅行"
+               if event.message["text"] =~ /旅行/
                    message = [
                        {
                        type: "text",
