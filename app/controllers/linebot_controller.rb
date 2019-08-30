@@ -33,6 +33,19 @@
                        text: ["いいえ、砂丘はありません。","島根にはないって言ってるでしょうが!!"].shuffle.first
                    }
                    ]
+               elsif event.message["text"] == "島根です。"
+               image_url =  "https://izumo-umaimono-ichiba.jp/syohinsetumei_image/04/2017041411270818923.jpg"
+                   message = [
+                       {
+                       type: "text",
+                       text: "島根にようこそ!!"
+                   },
+                   {
+                        type: "image",
+                        originalContentUrl: image_url,
+                        previewImageUrl: image_url
+                       }
+                   ]
                 elsif event.message["text"] =~ /キーワード/
                    message = [
                        {
