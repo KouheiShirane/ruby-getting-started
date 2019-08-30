@@ -26,26 +26,27 @@
          when Line::Bot::Event::Message
            case event.type
            when Line::Bot::Event::MessageType::Text
-               if event.message["text"] == "旅行"
+               if event.message["text"] =~ "旅行"
                    message = {
                        type: "text",
                        text: "島根に行きましょう!!"
                    }
-               end
-             message = {
-               type: "text",
-               text:  ["島根は鳥取の左側です",
-                        "た〜か〜の〜つ〜め〜",
-                        "上司だからっていい気になりやがって…バカ野郎!!",
-                        "島根ではよくあることです",
-                        "島根には世界遺産があると言っても信じてもらえません…",
-                        "島根県に来るならここを確認です。https://www.kankou-shimane.com"].shuffle.first
-             }
+               else
+                 message = {
+                   type: "text",
+                   text:  ["島根は鳥取の左側です",
+                            "た〜か〜の〜つ〜め〜",
+                            "上司だからっていい気になりやがって…バカ野郎!!",
+                            "島根ではよくあることです",
+                            "島根には世界遺産があると言っても信じてもらえません…",
+                            "島根県に来るならここを確認です。https://www.kankou-shimane.com"].shuffle.first
+                 }
+                end
              client.reply_message(event["replyToken"], message)
            when Line::Bot::Event::MessageType::Location
              message = {
                type: "location",
-               title: "あなたはここにいますか？",
+               title: "ここは島根ですか？",
                address: event.message["address"],
                latitude: event.message["latitude"],
                longitude: event.message["longitude"]
