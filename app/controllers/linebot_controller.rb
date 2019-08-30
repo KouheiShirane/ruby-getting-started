@@ -26,37 +26,37 @@
          when Line::Bot::Event::Message
            case event.type
            when Line::Bot::Event::MessageType::Text
-               if event.message["text"] =~ /旅行/
+                if event.message["text"] =~ /旅行/
                    message = [
                        {
                        type: "text",
                        text: ["島根に行きましょう!!","鳥取なんかより島根の方が楽しいですよ!!"].shuffle.first
                    }
                    ]
-                   elsif　event.message["text"] =~ /自己紹介/
+                elsif　event.message["text"] =~ /自己紹介/
                    image_url =  "https://blog-imgs-19.fc2.com/a/p/g/apg/taka1-18.jpg"
                    message = [
                        {
-                       type: "text",
-                       text: "こんにちは島根の吉田です。本名は吉田“ジャスティス”カツヲ21歳です。
+                       　　type: "text",
+                       　　text: "こんにちは島根の吉田です。本名は吉田“ジャスティス”カツヲ21歳です。
 誕生日は7月27日。
 鷹の爪団の戦闘主任で、怪人製造マシン完成後は怪人製造の担当主任も務めています。
 島根県庁からは「しまねSuper大使」に任命されました。よろしくお願いします。"
                    },
-                   {
-                       type: "image",
-                       originalContentUrl: image_url,
-                        previewImageUrl: image_url
-                   }
+                       {
+                           type: "image",
+                           originalContentUrl: image_url,
+                            previewImageUrl: image_url
+                       }
                    ]
-                   elsif　event.message["text"] =~ /アニメ/
+                elsif　event.message["text"] =~ /アニメ/
                    message = [
                        {
-                       type: "text",
-                       text: ["https://www.youtube.com/watch?v=VvvSfLFGyws"].shuffle.first
-                   }
+                           type: "text",
+                           text: "https://www.youtube.com/watch?v=VvvSfLFGyws"
+                       }
                    ]
-               else
+                else
                  message = [
                      {
                    type: "text",
