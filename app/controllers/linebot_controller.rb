@@ -26,14 +26,14 @@
          when Line::Bot::Event::Message
            case event.type
            when Line::Bot::Event::MessageType::Text
-                if event.message["text"] =~ /キーワード/
+                if event.message["text"] =~ /砂丘/
                    message = [
                        {
                        type: "text",
                        text: ["島根に行きましょう!!","鳥取なんかより島根の方が楽しいですよ!!"].shuffle.first
                    }
                    ]
-                elsif event.message["text"] =~ /砂丘/
+                elsif event.message["text"] =~ /キーワード/
                    message = [
                        {
                        type: "text",
