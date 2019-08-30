@@ -28,7 +28,11 @@
            when Line::Bot::Event::MessageType::Text
              message = {
                type: "text",
-               text: event.message["text"] + "!"
+               text:  ["島根は鳥取の左側です",
+                        "た〜か〜の〜つ〜め〜",
+                        "上司だからっていい気になりやがって…バカ野郎!!",
+                        "島根ではよくあることです",
+                        "島根には世界遺産があると言っても信じてもらえません…"].shuffle.first
              }
              client.reply_message(event["replyToken"], message)
            when Line::Bot::Event::MessageType::Location
