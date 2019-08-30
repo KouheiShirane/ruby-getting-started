@@ -26,11 +26,26 @@
          when Line::Bot::Event::Message
            case event.type
            when Line::Bot::Event::MessageType::Text
-                if event.message["text"] =~ /砂丘/
+                if event.message["text"] =~ /キーワード/
                    message = [
                        {
                        type: "text",
-                       text: ["いいえ、砂丘はありません。","砂丘は島根にはないって言ってるでしょうが!!"].shuffle.first
+                       text: ["島根に行きましょう!!","鳥取なんかより島根の方が楽しいですよ!!"].shuffle.first
+                   }
+                   ]
+                elsif event.message["text"] =~ /砂丘/
+                   message = [
+                       {
+                       type: "text",
+                       text: "これを送ってもらえれば僕が反応します。
+・自己紹介
+・旅行
+・島根
+・た〜か〜の〜つ〜め〜
+他にも適当に話しかけると反応するので遊んでください。
+わからなくなったら「キーワード」でもう一度教えます。
+
+「砂丘」とか言わないでくださいよ…？"
                    }
                    ]
                     elsif event.message["text"] =~ /島根/
