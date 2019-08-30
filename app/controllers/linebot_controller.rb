@@ -34,7 +34,8 @@
                    }
                    ]
                else
-                 message = {
+                 message = [
+                     {
                    type: "text",
                    text:  ["島根は鳥取の左側です",
                             "た〜か〜の〜つ〜め〜",
@@ -43,6 +44,7 @@
                             "島根には世界遺産があると言っても信じてもらえません…",
                             "島根県に来るならここを確認です。https://www.kankou-shimane.com"].shuffle.first
                  }
+                 ]
                 end
              client.reply_message(event["replyToken"], message)
            when Line::Bot::Event::MessageType::Location
