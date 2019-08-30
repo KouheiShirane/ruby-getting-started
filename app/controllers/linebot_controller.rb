@@ -30,7 +30,7 @@
                    message = [
                        {
                        type: "text",
-                       text: ["島根に行きましょう!!","鳥取なんかより島根の方が楽しいですよ!!"].shuffle.first
+                       text: ["いいえ、砂丘はありません。","島根にはないって言ってるでしょうが!!"].shuffle.first
                    }
                    ]
                 elsif event.message["text"] =~ /キーワード/
