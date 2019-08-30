@@ -30,19 +30,11 @@
                    message = [
                        {
                        type: "text",
-                       text: "島根に行きましょう!!"
+                       text: ["島根に行きましょう!!","鳥取なんかより島根の方が楽しいですよ!!"].shuffle.first
                    }
                    ]
-               elsif
-               event.message["text"] =~ /旅行/
-                   message = [
-                       {
-                       type: "text",
-                       text: "鳥取よりも島根に行きましょう!!"
-                   }
-                   ]
-                   
                    elsif
+                   image_url = = "https://gigazine.net/news/20150213-yoshidakun-birthday/#group=nogroup&photo=11.jpg"
                    event.message["text"] =~ /自己紹介/
                    message = [
                        {
@@ -51,6 +43,11 @@
 誕生日は7月27日。
 鷹の爪団の戦闘主任で、怪人製造マシン完成後は怪人製造の担当主任も務めています。
 島根県庁からは「しまねSuper大使」に任命されました。よろしくお願いします。"
+                   },
+                   {
+                       type: "image",
+                       originalContentUrl: image_url,
+                        previewImageUrl: image_url
                    }
                    ]
                else
