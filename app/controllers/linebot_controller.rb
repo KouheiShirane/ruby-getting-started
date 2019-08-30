@@ -49,13 +49,6 @@
                             previewImageUrl: image_url
                        }
                    ]
-                elsif　event.message["text"] =~ /アニメ/
-                   message = [
-                       {
-                           type: "text",
-                           text: "https://www.youtube.com/watch?v=VvvSfLFGyws"
-                       }
-                   ]
                 else
                  message = [
                      {
